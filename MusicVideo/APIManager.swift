@@ -28,7 +28,7 @@ class APIManager {
                     //completion(result: "NSURLSession Successful!")
                     //print(data)
                     do {
-                        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String: AnyObject] {
+                        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? JSONDictionary {
                             print(json)
                             let priority = DISPATCH_QUEUE_PRIORITY_HIGH
                             dispatch_async(dispatch_get_global_queue(priority, 0)) {
